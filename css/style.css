@@ -1,3 +1,18 @@
+/* Custom Properties */
+:root {
+    --clr-light-pink: #d89bc9;
+    --clr-light-purple: #a28fcc;
+    --clr-light-green: #b4ccab;
+    --clr-light-skyblue: #91c8db;
+
+    --clr-yellow: #ffd065;
+    --clr-crimson: #db5b6f;
+
+    --clr-disable: gray;
+
+    --ff-base: "Roboto", sans-serif;
+}
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -7,4 +22,72 @@ html,
 body {
     height: 100vh;
     scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* Utility */
+.grid--group {
+    display: grid;
+}
+.flex--group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Generic Styling */
+button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+/* Styling */
+body {
+    padding: 0rem 4rem;
+    flex-direction: column;
+    font-family: var(--ff-base);
+}
+header {
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.65rem 5rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+nav {
+    gap: 2rem;
+    font-weight: 600;
+}
+nav li {
+    text-transform: uppercase;
+}
+nav li a {
+    color: var(--clr-disable);
+}
+nav li.active a {
+    color: black;
+    padding-bottom: 0.1rem;
+    border-bottom: 3px solid var(--clr-crimson);
+}
+header span {
+    gap: 1.5rem;
+}
+.order-button {
+    padding: 0rem 1rem;
+    background-color: var(--clr-yellow);
+}
+
+main {
+    border: 1px solid green;
+}
+footer {
+    border: 1px solid blue;
 }
